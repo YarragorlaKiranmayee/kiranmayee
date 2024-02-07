@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery with Avatar and Media</title>
+<style>
+  /* Styling for the gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+
+<!-- Icon button for gallery -->
+<button onclick="toggleGallery()">Open Gallery</button>
+
+<!-- Image Gallery -->
+<div id="gallery" class="gallery" style="display: none;">
+  <img src="C:\Users\admin\Pictures\snow.jpeg" alt="Image 1">
+  <img src="C:\Users\admin\Pictures\nature.jpg" alt="Image 2">
+  <img src="C:\Users\admin\Pictures\mountain.jpeg" alt="Image 3">
+  <img src="C:\Users\admin\Pictures\cloud.jpeg" alt="Image 4">
+  <img src="C:\Users\admin\Pictures\flower.jpeg " alt="Image 5">
+</div>
+
+<!-- Avatar -->
+<img src="avatar.jpg" alt="Avatar" style="width: 100px; height: 100px; border-radius: 50%;">
+
+<!-- Embedded Video -->
+<iframe width="560" height="315" src=` "https://www.youtube.com/shorts/pon4OtNYKwg?feature=share" frameborder="0" allowfullscreen></iframe>
+
+<!-- Embedded Audio -->
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  function toggleGallery() {
+    var gallery = document.getElementById("gallery");
+    if (gallery.style.display === "none") {
+      gallery.style.display = "grid";
+    } else {
+      gallery.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
