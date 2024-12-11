@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getdata()">GET</button>
+    <h1 id="123"></h1>
+    <script>
+        function getdata(){
+            const req=new XMLHttpRequest()
+            req.open("GET",'http://localhost:3000/student')
+            req.onload=function(){
+                document.getElementById('123').innerHTML=this.responseText;
+            }
+            req.send()
+        }
+    </script>
+</body>
+</html>
